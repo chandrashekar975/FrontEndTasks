@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .hover-opacity {
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .hover-opacity:hover {
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top flex-wrap">
+        <div class="container-fluid flex-wrap">
+
+            <div class="d-flex align-items-center text-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="download.png" style="mix-blend-mode: multiply;">
+                </a>
+                <div class="display-5 fw-bold ms-auto">Student Management Portal</div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCon">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse w-100 mt-2 mt-sm-1" id="navCon">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0 ms-auto">
+                    <li class="nav-item fs-5">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown fs-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">CSE</a></li>
+                            <li><a class="dropdown-item" href="#">CSE-CS</a></li>
+                            <li><a class="dropdown-item" href="#">CSE-DS</a></li>
+                            <li><a class="dropdown-item" href="#">CSE-AIML</a></li>
+                            <li><a class="dropdown-item" href="#">ECE</a></li>
+                            <li><a class="dropdown-item" href="#">EEE</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-warning" type="button">
+                        <a href="login.html" class="text-decoration-none text-dark fs-5">Login</a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container my-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">  
+                <div class="card shadow border-0">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h3 class="mb-0 text-center fw-bold"><i class="bi bi-person-plus-fill me-2"></i>Student Registration Form</h3>
+                    </div>
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <form class="row g-3" action="./dashboard.html">
+                            
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label fw-semibold">Full Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Enter first and last name" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="rollNumber" class="form-label fw-semibold">Roll Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-card-text"></i></span>
+                                    <input type="text" class="form-control" id="rollNumber" placeholder="e.g., 23B81A0501" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="studentEmail" class="form-label fw-semibold">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" id="studentEmail" placeholder="rollno@cvr.ac.in" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="mobileNumber" class="form-label fw-semibold">Mobile Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-telephone"></i></span>
+                                    <input type="tel" class="form-control" id="mobileNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-block">Gender</label>
+                                <div class="mt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" required>
+                                        <label class="form-check-label" for="genderMale">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female" required>
+                                        <label class="form-check-label" for="genderFemale">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other" required>
+                                        <label class="form-check-label" for="genderOther">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="branchSelect" class="form-label fw-semibold">Academic Branch</label>
+                                <select class="form-select" id="branchSelect" required>
+                                    <option selected disabled value="">Choose your engineering stream...</option>
+                                    <option value="CSE">CSE (Computer Science & Engineering)</option>
+                                    <option value="CSE-CS">CSE - Cyber Security</option>
+                                    <option value="CSE-DS">CSE - Data Science</option>
+                                    <option value="CSE-AIML">CSE - Artificial Intelligence & Machine Learning</option>
+                                    <option value="ECE">ECE (Electronics & Communication Engineering)</option>
+                                    <option value="EEE">EEE (Electrical & Electronics Engineering)</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="dob" class="form-label fw-semibold">Date of Birth</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-calendar3"></i></span>
+                                    <input type="date" class="form-control" id="dob" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="photoUpload" class="form-label fw-semibold">Upload Passport Photo</label>
+                                <input type="file" class="form-control" id="photoUpload" accept="image/*" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="addressText" class="form-label fw-semibold">Permanent Address</label>
+                                <textarea class="form-control" id="addressText" rows="3" placeholder="Enter complete home mailing address details..." required></textarea>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label text-muted small" for="termsCheck">
+                                        I certify that the information supplied above is accurate, true, and complete. I agree to abide by the institutional code of conduct and regulations.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button class="btn btn-primary btn-lg px-5 fw-bold" type="submit">Submit Registration</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fixed-bottom border-top bg-primary text-white py-3">
+        <div class="container-fluid d-flex flex-column flex-sm-row justify-content-between align-items-center px-4">
+
+            <p class="mb-2 mb-sm-0 fw-bold text-center text-sm-start">
+                &copy; 2026 CVR College of Engineering. All Rights Reserved.
+            </p>
+
+            <div class="d-flex gap-3 fs-4">
+                <a href="https://facebook.com" target="_blank" class="text-white hover-opacity"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white hover-opacity"><i
+                        class="bi bi-twitter-x"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white hover-opacity"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white hover-opacity"><i
+                        class="bi bi-linkedin"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
