@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient sticky-top py-0">
         <div class="container-fluid">
 
@@ -59,19 +59,10 @@
                     <li class="nav-item fs-5 px-2">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item dropdown fs-5 px-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="courses.html">
                             Courses
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">CSE</a></li>
-                            <li><a class="dropdown-item" href="#">CSE-CS</a></li>
-                            <li><a class="dropdown-item" href="#">CSE-DS</a></li>
-                            <li><a class="dropdown-item" href="#">CSE-AIML</a></li>
-                            <li><a class="dropdown-item" href="#">ECE</a></li>
-                            <li><a class="dropdown-item" href="#">EEE</a></li>
-                        </ul>
                     </li>
                     <li class="nav-item fs-5 px-2">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -205,18 +196,17 @@
             </div>
         </div>
     </div>
-    <hr class="border border-white border-5">
 
-    <!-- Student Testimonials Section with Carousel -->
-    <div class="container mt-5" id="testimonials">
+    <hr class="border border-white border-5 my-5">
+
+    <div class="container my-5 pb-5" id="testimonials">
         <div class="h2 text-center fw-bold text-light pb-4">
             Student Testimonials
         </div>
 
-        <!-- Bootstrap Carousel Wrapper -->
-        <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="5000">
 
-            <!-- Indicators/Dots at the bottom -->
             <div class="carousel-indicators" style="margin-bottom: -2rem;">
                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -226,10 +216,8 @@
                     aria-label="Slide 3"></button>
             </div>
 
-            <!-- Carousel Slides -->
             <div class="carousel-inner">
 
-                <!-- Slide 1 (Marked as Active) -->
                 <div class="carousel-item active">
                     <div class="row justify-content-center">
                         <div class="col-10">
@@ -250,7 +238,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
                 <div class="carousel-item">
                     <div class="row justify-content-center">
                         <div class="col-10">
@@ -270,7 +257,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
                 <div class="carousel-item">
                     <div class="row justify-content-center">
                         <div class="col-10">
@@ -293,7 +279,6 @@
 
             </div>
 
-            <!-- Left and Right Navigation Arrows -->
             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -308,7 +293,21 @@
         </div>
     </div>
 
-    <footer class="footer sticky-bottom border-top bg-primary bg-gradient text-white py-3 mt-5">
+    <footer class="footer border-top bg-primary bg-gradient text-white py-3 mt-auto pt-4">
+        <div class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center text-muted">
+            <div>
+                <i class="bi bi-geo-alt-fill me-2 text-white"></i> Delhi, India
+            </div>
+            <div>
+                <i class="bi bi-telephone-fill me-2 text-white"></i> +91 12345 67890
+            </div>
+            <div>
+                <i class="bi bi-envelope-fill me-2 text-white"></i> info@nexuslearn.com
+            </div>
+        </div>
+
+        <hr class="border-light opacity-25 my-3">
+
         <div class="container-fluid d-flex flex-column flex-sm-row justify-content-between align-items-center px-4">
 
             <p class="mb-2 mb-sm-0 fw-bold text-center text-sm-start">
