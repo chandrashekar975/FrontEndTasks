@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .hover-opacity {
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .hover-opacity:hover {
+            opacity: 0.75;
+        }
+
+        body {
+            background-image: url('bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            /* Keeps the background locked in place while the text scrolls over it */
+            background-attachment: fixed;
+
+            /* Guarantees the body fills the browser window viewport */
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Enforce structured matching aspect ratios for course images */
+        .course-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* Subtle scaling on card hover for a more interactive experience */
+        .course-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient sticky-top py-0">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="back.png" style="mix-blend-mode: multiply;" alt="Logo" height="100px" width="150px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCon">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse w-100 justify-content-lg-between" id="navCon">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link active" aria-current="page" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex mt-2 mt-lg-0">
+                    <a href="login.html" class="btn btn-warning fs-5 fw-medium text-dark px-4">Login</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container my-5 pb-5">
+        
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-white">Explore Our Programs</h1>
+            <p class="text-light opacity-75 fs-5">Structured technical paths designed to turn conceptual foundational knowledge into production skills.</p>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c1.png" class="card-img-top course-image" alt="Web Development" onerror="this.src='https://placehold.co/600x400?text=Web+Development'">
+                        <span class="position-absolute top-0 end-0 bg-primary text-white px-3 py-1 m-2 rounded-pill small fw-bold">Trending</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Full-Stack Web Development</h5>
+                            <p class="card-text text-secondary small mb-3">Master frontend frameworks and backend runtimes. Build production-grade, database-driven cloud applications from scratch.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>16 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>All Levels</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>Self-Paced + Live Sync</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">HTML5/CSS3</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">React.js</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Node.js</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">MongoDB</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹4,999</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c2.png" class="card-img-top course-image" alt="Python Programming" onerror="this.src='https://placehold.co/600x400?text=Python+Programming'">
+                        <span class="position-absolute top-0 end-0 bg-dark text-white px-3 py-1 m-2 rounded-pill small fw-bold">Foundational</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Advanced Python Core Frameworks</h5>
+                            <p class="card-text text-secondary small mb-3">Go from computational syntax logic basics to complex object-oriented patterns, multithreading processes, and API pipelines.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>8 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>Beginner Friendly</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>100% Online Classes</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">OOP principles</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Data Structures</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">FastAPI</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹2,999</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c3.png" class="card-img-top course-image" alt="Data Science" onerror="this.src='https://placehold.co/600x400?text=Data+Science'">
+                        <span class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 m-2 rounded-pill small fw-bold">Job Ready</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Data Science & Analytics Bootcamp</h5>
+                            <p class="card-text text-secondary small mb-3">Isolate, process, clean, and map statistical trends. Transform raw unstructured data points into enterprise-level predictive models.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>12 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>Intermediate</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>Includes 4 Capstones</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Pandas/NumPy</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Matplotlib</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">SQL Architecture</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹5,999</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c4.png" class="card-img-top course-image" alt="AI & ML" onerror="this.src='https://placehold.co/600x400?text=AI+%26+ML'">
+                        <span class="position-absolute top-0 end-0 bg-danger text-white px-3 py-1 m-2 rounded-pill small fw-bold">Advanced</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Artificial Intelligence & ML</h5>
+                            <p class="card-text text-secondary small mb-3">Dive deep into neural pathways, deep learning networks, system automation structures, and Natural Language Processing models.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>10 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>Advanced Level</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>Math/Python Prep Req.</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Scikit-Learn</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">TensorFlow</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Neural Nets</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹3,499</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c5.png" class="card-img-top course-image" alt="Java Programming" onerror="this.src='https://placehold.co/600x400?text=Java+Programming'">
+                        <span class="position-absolute top-0 end-0 bg-info text-dark px-3 py-1 m-2 rounded-pill small fw-bold">Enterprise</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Enterprise Java Development</h5>
+                            <p class="card-text text-secondary small mb-3">Architect highly scaling backend microservices using robust object structures, memory handling patterns, and Spring framework engines.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>10 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>Intermediate</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>Industry Mentor Led</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Java SE/EE</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Spring Boot</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Hibernate ORM</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹3,999</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 course-card">
+                    <div class="position-relative">
+                        <img src="c6.png" class="card-img-top course-image" alt="Cloud Computing" onerror="this.src='https://placehold.co/600x400?text=Cloud+Computing'">
+                        <span class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 m-2 rounded-pill small fw-bold">Certification</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-2">Cloud Infrastructure (AWS/Azure)</h5>
+                            <p class="card-text text-secondary small mb-3">Deploy, configure, secure, and auto-scale distributed systems across global software infrastructure ecosystems.</p>
+                            
+                            <div class="bg-light p-2 rounded mb-3 small text-muted">
+                                <div class="row g-0 mb-1">
+                                    <div class="col-6"><i class="bi bi-clock me-2 text-primary"></i>8 Weeks</div>
+                                    <div class="col-6"><i class="bi bi-mortarboard me-2 text-primary"></i>All Levels</div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-12"><i class="bi bi-laptop me-2 text-primary"></i>Hands-on Sandbox Labs</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">AWS Architecture</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">Docker Units</span>
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis">CI/CD Pipelines</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fs-4 fw-bold text-primary">₹4,499</span>
+                                <a href="#" class="btn btn-primary fw-medium px-3">View Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer border-top bg-primary bg-gradient text-white py-4 mt-auto">
+        <div class="container-fluid d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center text-white mb-3 opacity-90 small">
+            <div>
+                <i class="bi bi-geo-alt-fill me-2 text-warning"></i> Delhi, India
+            </div>
+            <div>
+                <i class="bi bi-telephone-fill me-2 text-warning"></i> +91 12345 67890
+            </div>
+            <div>
+                <i class="bi bi-envelope-fill me-2 text-warning"></i> info@nexuslearn.com
+            </div>
+        </div>
+
+        <hr class="border-light opacity-25 my-3">
+
+        <div class="container-fluid d-flex flex-column flex-sm-row justify-content-between align-items-center px-4">
+            <p class="mb-2 mb-sm-0 fw-bold text-center text-sm-start small">
+                &copy; 2026 NexusLearn Pvt Ltd. All Rights Reserved.
+            </p>
+
+            <div class="d-flex gap-3 fs-4">
+                <a href="https://facebook.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

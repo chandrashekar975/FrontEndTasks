@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .hover-opacity {
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .hover-opacity:hover {
+            opacity: 0.75;
+        }
+
+        body {
+            background-image: url('bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            /* Keeps the background locked in place while the text scrolls over it */
+            background-attachment: fixed;
+
+            /* Guarantees the body fills the browser window viewport */
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient sticky-top py-0">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="back.png" style="mix-blend-mode: multiply;" alt="Logo" height="100px" width="150px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCon">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse w-100 justify-content-lg-between" id="navCon">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item fs-5 px-2">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex mt-2 mt-lg-0">
+                    <a href="login.html" class="btn btn-warning fs-5 fw-medium text-dark px-4">Login</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container my-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                
+                <div id="alertPlaceholder"></div>
+
+                <div class="card border-0 shadow p-4 p-md-5 bg-white bg-opacity-95 rounded-3">
+                    <div class="card-body">
+                        
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold text-primary"><i class="bi bi-person-check-fill me-2"></i>Student Registration</h2>
+                            <p class="text-muted mb-0">Fill out your profile details below to claim your learning dashboard footprint.</p>
+                        </div>
+
+                        <form id="registrationForm" enctype="multipart/form-data">
+                            <div class="row g-4">
+                                
+                                <div class="col-md-6">
+                                    <label for="studentName" class="form-label fw-semibold text-secondary">Student Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="studentName" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="studentEmail" class="form-label fw-semibold text-secondary">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="studentEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="studentMobile" class="form-label fw-semibold text-secondary">Mobile Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-phone"></i></span>
+                                        <input type="tel" class="form-control" id="studentMobile" placeholder="+91 XXXXX XXXXX" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-secondary d-block">Gender</label>
+                                    <div class="pt-2">
+                                        <div class="form-check form-check-inline me-4">
+                                            <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" required>
+                                            <label class="form-check-label" href="#genderMale">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline me-4">
+                                            <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female">
+                                            <label class="form-check-label" href="#genderFemale">Female</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other">
+                                            <label class="form-check-label" href="#genderOther">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="courseSelect" class="form-label fw-semibold text-secondary">Select Desired Course</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-book"></i></span>
+                                        <select class="form-select" id="courseSelect" required>
+                                            <option value="" selected disabled>Choose a program...</option>
+                                            <option value="web-dev">Full-Stack Web Development</option>
+                                            <option value="python">Advanced Python Core Frameworks</option>
+                                            <option value="data-sci">Data Science & Analytics Bootcamp</option>
+                                            <option value="ai-ml">Artificial Intelligence & ML</option>
+                                            <option value="java-ent">Enterprise Java Development</option>
+                                            <option value="cloud-comp">Cloud Infrastructure (AWS/Azure)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="qualificationSelect" class="form-label fw-semibold text-secondary">Highest Qualification</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-mortarboard"></i></span>
+                                        <select class="form-select" id="qualificationSelect" required>
+                                            <option value="" selected disabled>Select qualification status...</option>
+                                            <option value="undergrad">Undergraduate (B.E. / B.Tech / BCA)</option>
+                                            <option value="graduate">Graduate Completed</option>
+                                            <option value="postgrad">Postgraduate (M.Tech / MCA / M.Sc)</option>
+                                            <option value="diploma">Diploma Background</option>
+                                            <option value="other">Other Academic Paths</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="studentAddress" class="form-label fw-semibold text-secondary">Permanent / Residential Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-geo-alt"></i></span>
+                                        <textarea class="form-control" id="studentAddress" rows="3" placeholder="Enter complete flat number, street locality, city, and pin postal tracking code..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="resumeUpload" class="form-label fw-semibold text-secondary">Upload Resume / CV <span class="text-muted fw-normal fs-6">(PDF or DOCX format)</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-secondary"><i class="bi bi-file-earmark-arrow-up"></i></span>
+                                        <input type="file" class="form-control" id="resumeUpload" accept=".pdf,.docx" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <div class="form-check align-items-start">
+                                        <input class="form-check-input mt-1" type="checkbox" id="termsCheck" required>
+                                        <label class="form-check-label small text-muted ms-2" for="termsCheck">
+                                            I hereby confirm that all information provided above is authentic and factual. I agree to receive technical curriculum updates and accept the overall enrollment policies governed by NexusLearn Pvt Ltd.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow">Submit Registration</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer border-top bg-primary bg-gradient text-white py-4 mt-auto">
+        <div class="container-fluid d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center text-white mb-3 opacity-90 small">
+            <div>
+                <i class="bi bi-geo-alt-fill me-2 text-warning"></i> Delhi, India
+            </div>
+            <div>
+                <i class="bi bi-telephone-fill me-2 text-warning"></i> +91 12345 67890
+            </div>
+            <div>
+                <i class="bi bi-envelope-fill me-2 text-warning"></i> info@nexuslearn.com
+            </div>
+        </div>
+
+        <hr class="border-light opacity-25 my-3">
+
+        <div class="container-fluid d-flex flex-column flex-sm-row justify-content-between align-items-center px-4">
+            <p class="mb-2 mb-sm-0 fw-bold text-center text-sm-start small">
+                &copy; 2026 NexusLearn Pvt Ltd. All Rights Reserved.
+            </p>
+
+            <div class="d-flex gap-3 fs-4">
+                <a href="https://facebook.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            // Prevent the browser tab from reloading automatically
+            event.preventDefault();
+
+            // Fetch destination container mapping 
+            const alertPlaceholder = document.getElementById('alertPlaceholder');
+
+            // Construct the Bootstrap Alert inner content element tree structure
+            alertPlaceholder.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show shadow border-0 p-4 mb-4" role="alert">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill fs-3 me-3 text-success"></i>
+                        <div>
+                            <h5 class="alert-heading fw-bold mb-1">Registration Submitted Successfully!</h5>
+                            <p class="mb-0 small">Welcome aboard! Your application details and resume have been indexed. A provisional student counselor will send access keys to your verified email within 24 hours.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close m-2" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+
+            // Reset form input data parameters cleanly for the next run cycle
+            this.reset();
+
+            // Smoothly push screen focus view frames straight to top of form coordinate layers
+            window.scrollTo({
+                top: alertPlaceholder.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
