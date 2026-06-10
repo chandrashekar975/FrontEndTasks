@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 75px;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        /* Hover interaction utility triggers */
+        .hover-lift {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .hover-opacity {
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .hover-opacity:hover {
+            opacity: 0.8;
+        }
+
+        .timeline {
+            position: relative;
+            border-left: 3px solid #0d6efd;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            background: #0d6efd;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#portfolioNavbar">
+
+    <nav id="portfolioNavbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#home">
+                <i class="bi bi-terminal-box me-2"></i>Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="bg-white py-5 my-md-5">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-column-reverse flex-md-row">
+                <div class="col-md-7 text-center text-md-start">
+                    <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 rounded-pill fw-bold">WELCOME TO MY PROFILE</span>
+                    <h1 class="display-4 fw-bold text-dark mb-2">Hi, I'm John Doe</h1>
+                    <h3 class="text-secondary fw-semibold mb-4">Cybersecurity Student & Backend Developer</h3>
+                    <p class="fs-5 text-muted mb-4" style="max-width: 600px;">
+                        Passionate about constructing scalable enterprise REST API engines, configuring threat detection logic arrays, and optimizing algorithms for secure real-time system architectures.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4 fw-bold shadow-sm">Get In Touch</a>
+                        <a href="#" class="btn btn-outline-dark btn-lg px-4 fw-bold" download>
+                            <i class="bi bi-download me-2"></i>Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400&h=400"
+                        alt="Profile Photo" class="img-fluid rounded-circle shadow p-2 bg-light border"
+                        style="width: 320px; height: 320px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr class="container opacity-25 my-0">
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase tracking-wider">About Me</h2>
+                <div class="bg-primary mx-auto rounded mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">A look into my professional drive, education background, and focus horizons.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-primary mb-3">
+                                <i class="bi bi-bullseye me-2"></i>Career Objective
+                            </h4>
+                            <p class="card-text text-secondary fs-5" style="line-height: 1.7;">
+                                Driven third-year Cybersecurity undergraduate specializing in system orchestration patterns. Aspiring to leverage expertise across production ecosystems, robust identity validation layers, and performance database paradigms to mitigate threats and protect critical assets within an enterprise architectural landscape.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-primary mb-3">
+                                <i class="bi bi-mortarboard-fill me-2"></i>Educational Details
+                            </h4>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 pb-3 border-bottom">
+                                    <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                        <h6 class="fw-bold text-dark mb-1">B.Tech in Computer Science (Cybersecurity)</h6>
+                                        <span class="badge bg-primary-subtle text-primary px-2.5 py-1 rounded-pill small fw-bold">2023 - Present</span>
+                                    </div>
+                                    <p class="text-muted small mb-0">CVR College of Engineering | GPA: 9.48/10</p>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                        <h6 class="fw-bold text-dark mb-1">Intermediate Education (MPC)</h6>
+                                        <span class="badge bg-secondary-subtle text-secondary-emphasis px-2.5 py-1 rounded-pill small fw-bold">2021 - 2023</span>
+                                    </div>
+                                    <p class="text-muted small mb-0">Narayana Junior College | Score: 98.2%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-primary mb-3 text-center text-md-start">
+                                <i class="bi bi-heart-fill me-2"></i>Personal Interests
+                            </h4>
+                            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                                <span class="badge bg-dark px-3 py-2.5 fs-6 fw-medium"><i class="bi bi-code-slash me-2"></i>Competitive Programming</span>
+                                <span class="badge bg-dark px-3 py-2.5 fs-6 fw-medium"><i class="bi bi-shield-lock-fill me-2"></i>Threat Research Execution</span>
+                                <span class="badge bg-dark px-3 py-2.5 fs-6 fw-medium"><i class="bi bi-database me-2"></i>Relational Index Optimization</span>
+                                <span class="badge bg-dark px-3 py-2.5 fs-6 fw-medium"><i class="bi bi-suit-club-fill me-2"></i>Cricket Statistics & Analytical Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase tracking-wider">Technical Skills</h2>
+                <div class="bg-primary mx-auto rounded mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">A structural overview of my programmatic competencies and engineering metrics.</p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-4 text-secondary"><i class="bi bi-sliders me-2"></i>Proficiency Metrics</h4>
+                    <div class="card border-0 bg-light p-4 shadow-sm">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-semibold text-dark">HTML5</span>
+                                <span class="text-muted small">95%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-semibold text-dark">CSS3 </span>
+                                <span class="text-muted small">90%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-semibold text-dark">Bootstrap Frameworks</span>
+                                <span class="text-muted small">85%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-semibold text-dark">JavaScript (ES6+)</span>
+                                <span class="text-muted small">80%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-4 text-secondary"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Core Competencies</h4>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card h-100 border-0 bg-light p-3 text-center hover-lift">
+                                <div class="fs-2 text-primary mb-2"><i class="bi bi-shield-check"></i></div>
+                                <h6 class="fw-bold text-dark mb-1">Cybersecurity</h6>
+                                <p class="text-muted small mb-0">JWT Protocols & RBAC Architecture</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 bg-light p-3 text-center hover-lift">
+                                <div class="fs-2 text-primary mb-2"><i class="bi bi-cpu"></i></div>
+                                <h6 class="fw-bold text-dark mb-1">Algorithms</h6>
+                                <p class="text-muted small mb-0">Java Range Query Systems</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 bg-light p-3 text-center hover-lift">
+                                <div class="fs-2 text-primary mb-2"><i class="bi bi-cloud-arrow-up"></i></div>
+                                <h6 class="fw-bold text-dark mb-1">Cloud Integration</h6>
+                                <p class="text-muted small mb-0">Supabase Realtime Engine Arrays</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 bg-light p-3 text-center hover-lift">
+                                <div class="fs-2 text-primary mb-2"><i class="bi bi-git"></i></div>
+                                <h6 class="fw-bold text-dark mb-1">Version Control</h6>
+                                <p class="text-muted small mb-0">Git Pipelines & Infrastructure Hubs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase tracking-wider">Featured Projects</h2>
+                <div class="bg-primary mx-auto rounded mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">A collection of technical solutions, applications, and architectural systems built across multiple frameworks.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Secure API Project" style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark mb-2">Secure REST API System</h5>
+                                <p class="card-text text-muted small mb-3">Enterprise-grade secure API utilizing Java Spring Boot, rule-based threat mitigation engines, and strict JWT validation controls.</p>
+                            </div>
+                            <div>
+                                <div class="mb-3 flex-wrap d-flex gap-1"><span class="badge bg-secondary-subtle text-secondary-emphasis small">Spring Boot</span><span class="badge bg-secondary-subtle text-secondary-emphasis small">JWT</span></div>
+                                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-primary w-100 fw-semibold"><i class="bi bi-github me-1"></i>View Code base</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Color Code Game" style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark mb-2">Color Code Puzzle Game</h5>
+                                <p class="card-text text-muted small mb-3">Interactive frontend verification canvas puzzle mapping color mixing logic arrays with state storage backend modules via Supabase integration pipelines.</p>
+                            </div>
+                            <div>
+                                <div class="mb-3 flex-wrap d-flex gap-1"><span class="badge bg-secondary-subtle text-secondary-emphasis small">HTML5/CSS3</span><span class="badge bg-secondary-subtle text-secondary-emphasis small">Supabase</span></div>
+                                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-primary w-100 fw-semibold"><i class="bi bi-github me-1"></i>View Code base</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Algorithmic Optimization" style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark mb-2">Algorithmic Query Sandbox</h5>
+                                <p class="card-text text-muted small mb-3">High-performance computational Java modules engineered to implement custom Fenwick Tree data matrices for optimized log tracking operations.</p>
+                            </div>
+                            <div>
+                                <div class="mb-3 flex-wrap d-flex gap-1"><span class="badge bg-secondary-subtle text-secondary-emphasis small">Java SE</span><span class="badge bg-secondary-subtle text-secondary-emphasis small">Data Structures</span></div>
+                                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-primary w-100 fw-semibold"><i class="bi bi-github me-1"></i>View Code base</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Student Management System" style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark mb-2">Student Portal Layer</h5>
+                                <p class="card-text text-muted small mb-3">Full-responsive administrative framework mapping custom credential filtering operations and secure input management matrices.</p>
+                            </div>
+                            <div>
+                                <div class="mb-3 flex-wrap d-flex gap-1"><span class="badge bg-secondary-subtle text-secondary-emphasis small">Bootstrap 5</span><span class="badge bg-secondary-subtle text-secondary-emphasis small">JS Core</span></div>
+                                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-primary w-100 fw-semibold"><i class="bi bi-github me-1"></i>View Code base</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase tracking-wider">Achievements & Timeline</h2>
+                <div class="bg-primary mx-auto rounded mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">An archival layout tracking professional milestones, certificates, workshops, and awards.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="text-primary fw-bold small">APRIL 2026</span>
+                            <h5 class="fw-bold text-dark mt-1">Enterprise Security Workshop Facilitator</h5>
+                            <p class="text-muted small">Collaborated across technical channels alongside three engineering peers to map threat vector validation steps over microservice cloud networks.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="text-primary fw-bold small">JANUARY 2026</span>
+                            <h5 class="fw-bold text-dark mt-1">Network Defence Operational Certification</h5>
+                            <p class="text-muted small">Earned advanced industry credentials verifying expertise in symmetric cryptographic configurations and automated state monitoring pipelines.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="text-primary fw-bold small">NOVEMBER 2025</span>
+                            <h5 class="fw-bold text-dark mt-1">Algorithmic Competitive Coding Elite Rank</h5>
+                            <p class="text-muted small">Achieved advanced programmatic ranking metrics for optimized computational task execution times across platforms including LeetCode and CodeChef.</p>
+                        </div>
+                        <div class="timeline-item style='padding-bottom: 0;'">
+                            <span class="text-primary fw-bold small">MAY 2025</span>
+                            <h5 class="fw-bold text-dark mt-1">Technical Innovation Excellence Award</h5>
+                            <p class="text-muted small">Recognized for structural interface engineering execution and design accuracy on the data-driven Color Puzzle Game environment model.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase tracking-wider">Contact Me</h2>
+                <div class="bg-primary mx-auto rounded mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">Have a problem to solve or a project layout to construct? Let's connect.</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary mb-4"><i class="bi bi-chat-left-dots-fill me-2"></i>Send a Message</h4>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="contactName" class="form-label fw-semibold text-secondary">Name</label>
+                                        <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="contactEmail" class="form-label fw-semibold text-secondary">Email Address</label>
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contactSubject" class="form-label fw-semibold text-secondary">Subject</label>
+                                        <input type="text" class="form-control" id="contactSubject" placeholder="Message Subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contactMessage" class="form-label fw-semibold text-secondary">Message</label>
+                                        <textarea class="form-control" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg px-4 fw-bold shadow-sm w-100">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-dark text-white bg-gradient">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="fw-bold text-warning mb-4"><i class="bi bi-building-fill me-2"></i>Contact Information</h4>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-geo-alt-fill text-warning fs-4 me-3 mt-1"></i>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Location</h5>
+                                            <p class="mb-0 text-white-50">Nalgonda, Telangana, India</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-envelope-fill text-warning fs-5 me-3 mt-1"></i>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Email Address</h5>
+                                            <p class="mb-0 text-white-50">john.doe@student.edu</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-linkedin text-warning fs-5 me-3 mt-1"></i>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Professional Workspace</h5>
+                                            <p class="mb-0 text-white-50">linkedin.com/in/johndoe-cybersec</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-top border-secondary">
+                                <h6 class="fw-bold text-warning mb-2">Operational Notice:</h6>
+                                <p class="text-white-50 small mb-0">Submissions received via the API payload matrix are checked within 12 standard validation cycles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white border-top border-secondary py-4">
+        <div class="container text-center">
+            <p class="mb-2 fw-bold text-white-50 small">© 2026 John Doe. All Rights Reserved.</p>
+            <div class="d-flex justify-content-center gap-3 fs-5">
+                <a href="https://github.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white hover-opacity"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="modalHeading" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold" id="modalHeading">
+                        <i class="bi bi-shield-check me-2"></i>Payload Dispatched
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="text-success mb-3">
+                        <i class="bi bi-check-circle-fill display-4"></i>
+                    </div>
+                    <h4 class="fw-bold text-dark">Message Sent Successfully!</h4>
+                    <p class="text-muted px-3">Thank you for reaching out. Your contact parameters have been indexed and securely buffered. I will review your inquiry shortly.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary px-4 font-semibold" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle contact form submission and launch the modal anchor
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Mitigate automatic transmission cycles
+
+            // Trigger Bootstrap Modal instance sequence
+            var confirmationModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+            confirmationModal.show();
+
+            this.reset(); // Purge active input variables cleanly
+        });
+    </script>
+</body>
+
+</html>
